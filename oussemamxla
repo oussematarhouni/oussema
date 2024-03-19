@@ -1,0 +1,30 @@
+import pyautogui
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+
+driver = webdriver.Edge()
+driver.get("https://instagram.com")
+res_username = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input')
+res_password = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input')
+res_login = driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button')
+res_username_click = res_username.click()
+res_username.send_keys("evertrader_bot")
+res_password_click = res_password.click()
+res_password.send_keys("Oussemasimsoume123456456789")
+res_login.send_keys(Keys.ENTER)
+time.sleep(6)
+res_notifications = driver.find_element(By.XPATH, '/html/body/div[3]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
+res_notifications.click()
+res_messages = driver.find_element(By.XPATH, '//*[@id="mount_0_0_1c"]/div/div/div[2]/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[5]/div/div/div/span/div/a')
+res_messages.click()
+res_oussema = driver.find_element(By.XPATH, '//*[@id="mount_0_0_1c"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div[1]/div')
+res_oussema.click()
+res_oussema_message = driver.find_element(By.XPATH, '//*[@id="mount_0_0_1c"]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[1]')
+res_oussema_message.click()
+res_oussema_message.send_keys("hi")
+res_oussema_message.send_keys(Keys.ENTER)
+time.sleep(6)
+driver.quit(10)
